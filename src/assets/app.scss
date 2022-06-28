@@ -165,19 +165,27 @@ h2,
 }
 
 .a-mb-40 {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  @include screen($xs) {
+    margin-bottom: 20px;
+  }
 }
 
 .a-mb-50 {
   margin-bottom: 50px;
+
+  @include screen($xs) {
+    margin-bottom: 25px;
+  }
 }
 
 .a-mb-60 {
   margin-bottom: 60px;
-}
 
-.a-mb-120 {
-  margin-bottom: 120px;
+  @include screen($xs) {
+    margin-bottom: 30px;
+  }
 }
 
 .a-text-center {

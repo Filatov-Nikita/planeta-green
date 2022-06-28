@@ -36,6 +36,9 @@ export default {};
 <style scoped lang="scss">
 .terms {
   padding-top: 120px;
+  @include screen($xs) {
+    padding-top: 60px;
+  }
 }
 
 .items {

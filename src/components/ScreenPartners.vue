@@ -46,6 +46,10 @@ export default {};
 .partners {
   padding-top: 120px;
   padding-bottom: 120px;
+  @include screen($xs) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .items {

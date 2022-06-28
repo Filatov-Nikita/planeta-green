@@ -59,6 +59,10 @@ export default {};
   @include screen($md) {
     margin: 30px;
   }
+
+  @include screen($xs) {
+    margin: 15px;
+  }
 }
 
 .giftPicture {

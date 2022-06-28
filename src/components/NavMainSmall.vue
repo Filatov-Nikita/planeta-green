@@ -11,6 +11,7 @@
           <a @click="toggle" href="#terms" class="link">Условия участия</a>
           <a @click="toggle" href="#info" class="link">Информация</a>
           <a @click="toggle" href="#partners" class="link">Партнеры</a>
+          <a @click="toggle" href="#" class="link">Личный кабинет</a>
         </nav>
       </div>
     </div>

@@ -42,6 +42,10 @@ export default {
 <style scoped lang="scss">
 .gifts {
   padding-top: 90px;
+
+  @include screen($xs) {
+    padding-top: 60px;
+  }
 }
 
 .gar-gift {

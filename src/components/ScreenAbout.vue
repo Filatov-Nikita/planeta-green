@@ -3,7 +3,8 @@
     <div class="wrapper">
       <div class="a-text-center">
         <h2 class="h2 a-mb-30">О проекте</h2>
-        <p class="text">{{ text }}</p>
+        <p class="text">{{ text1 }}</p>
+        <p class="text">{{ text2 }}</p>
       </div>
       <div class="features">
         <div class="features__items">
@@ -44,7 +45,10 @@
 export default {
   data() {
     return {
-      text: 'За каждого 100 000 посетителя пришедшего в Планету, торговый центр высадит одно дерево. Воплощая в жизнь очень простую идею посадки деревьев, мы объединяем всех разумных жителей нашего города, чтобы сохранить хрупкую экосистему и поддерживать её в благоприятном состоянии для счастливой и здоровой жизни',
+      text1:
+        'За каждого 100 000 посетителя пришедшего в Планету, торговый центр высадит одно дерево.',
+      text2:
+        'Воплощая в жизнь очень простую идею посадки деревьев, мы объединяем всех разумных жителей нашего города, чтобы сохранить хрупкую экосистему и поддерживать её в благоприятном состоянии для счастливой и здоровой жизни',
     };
   },
 };
@@ -53,14 +57,20 @@ export default {
 <style scoped lang="scss">
 .about {
   padding-top: 90px;
-  background: url(@/assets/images/about.png) no-repeat;
+  background-image: url(@/assets/images/about.png);
+  background-repeat: no-repeat;
   background-position: bottom center;
   min-height: 1026px;
+
+  @include screen($lg) {
+    background-size: 700px;
+  }
 
   @include screen($xs) {
     min-height: auto;
     background-position: center;
     background-size: 340px;
+    padding-top: 60px;
   }
 }
 
@@ -70,6 +80,10 @@ export default {
   font-weight: 400;
   font-size: 20px;
   line-height: 152%;
+
+  & + & {
+    margin-top: 15px;
+  }
 }
 
 .features {

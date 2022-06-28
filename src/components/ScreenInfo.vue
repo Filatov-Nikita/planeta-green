@@ -6,23 +6,40 @@
         <div class="btns">
           <a class="btn btn--tl" href="#">Правила акции</a>
           <a class="btn btn--tr" href="#">Вопросы-ответы</a>
-          <a class="btn btn--tr" href="#">Видео-инструкция</a>
+          <a @click.prevent="showInstruct = true" class="btn btn--tr" href="#"
+            >Видео-инструкция</a
+          >
           <a class="btn btn--tl" href="#"
             >Соглашение на обработку персональных данных</a
           >
         </div>
       </div>
     </div>
+    <Dialog v-model="showInstruct"> video </Dialog>
   </section>
 </template>
 
 <script>
-export default {};
+import Dialog from './Dialog.vue';
+
+export default {
+  data() {
+    return {
+      showInstruct: false,
+    };
+  },
+  components: {
+    Dialog,
+  },
+};
 </script>
 
 <style scoped lang="scss">
 .info {
   padding-top: 120px;
+  @include screen($xs) {
+    padding-top: 60px;
+  }
 }
 
 .items {
@@ -34,6 +51,7 @@ export default {};
 
   @include screen($xs) {
     margin: 0 -15px;
+    border-radius: 0;
   }
 }
 
@@ -69,10 +87,11 @@ export default {};
     margin-top: 7px;
     flex-basis: calc(50% - 7px);
     font-size: 12px;
+    line-height: 1;
     text-align: left;
     padding-left: 20px;
     padding-right: 10px;
-    justify-content: flex-start;
+    min-height: 80px;
   }
 
   &--tl {
