@@ -9,17 +9,11 @@
 
 <script>
 export default {
-  data() {
-    return {
-      dates: [
-        '22 июля',
-        '5 августа',
-        '19 августа',
-        '2 сентября',
-        '16 сентября',
-        '30 сентября',
-      ],
-    };
+  props: {
+    dates: {
+      required: true,
+      type: Array
+    }
   },
 };
 </script>

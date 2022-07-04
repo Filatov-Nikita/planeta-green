@@ -1,10 +1,14 @@
 <template>
   <section class="gifts" id="gift">
     <div class="wrapper fields">
-      <h2 class="h2 a-text-center a-mb-50">Призы</h2>
-      <GiftsDates class="a-mb-60" />
-      <GiftsList class="a-mb-50" />
+      <h2 class="h2 a-text-center a-mb-50">{{ coupons !== undefined ? 'Призы и победители' : 'Призы'}}</h2>
+      <GiftsDates class="a-mb-60" v-bind="{ dates }" />
+      <GiftsList class="a-mb-50" v-bind="{ coupons, from }" />
+    </div>
 
+    <GiftsGet v-if="coupons !== undefined" />
+
+    <div class="wrapper fields">
       <div class="gar-gift">
         <div class="gar-gift__content">
           <p class="gar-gift__title">
@@ -30,11 +34,35 @@
 <script>
 import GiftsDates from './GiftsDates.vue';
 import GiftsList from './GiftsList.vue';
+import GiftsGet from './GiftsGet.vue';
 
 export default {
+  props: {
+    coupons: {
+      default: undefined,
+      type: Object
+    },
+    from: {
+      default: undefined,
+      type: String
+    }
+  },
+  data() {
+    return {
+      dates: [
+        // '22 июля',
+        '5 августа',
+        '19 августа',
+        '2 сентября',
+        '16 сентября',
+        '30 сентября',
+      ],
+    }
+  },
   components: {
     GiftsDates,
     GiftsList,
+    GiftsGet
   },
 };
 </script>

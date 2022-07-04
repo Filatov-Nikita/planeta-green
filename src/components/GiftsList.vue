@@ -9,8 +9,11 @@
           alt="приз - зонт"
         />
       </div>
-      <div class="label">Зонты</div>
-      <div class="value">50 шт</div>
+      <div class="name">
+        <div class="label">Зонты</div>
+        <div class="value">50 шт</div>
+      </div>
+      <CouponList v-if="coupons && coupons.umbrella" v-bind="{ coupons: coupons.umbrella, from }"/>
     </div>
     <div class="item">
       <div class="giftPicture">
@@ -21,8 +24,11 @@
           alt="приз - абонемент в фитнес-клуб"
         />
       </div>
-      <div class="label">Абонементы в фитнес-клуб на 1 месяц</div>
-      <div class="value">50 шт</div>
+      <div class="name">
+        <div class="label">Абонементы в фитнес-клуб на 1 месяц</div>
+        <div class="value">50 шт</div>
+      </div>
+      <CouponList v-if="coupons && coupons.fitness" v-bind="{ coupons: coupons.fitness, from }"/>
     </div>
     <div class="item">
       <div class="giftPicture">
@@ -33,14 +39,33 @@
           alt="приз - бутылки"
         />
       </div>
-      <div class="label">Бутылки</div>
-      <div class="value">50 шт</div>
+      <div class="name">
+        <div class="label">Бутылки</div>
+        <div class="value">50 шт</div>
+      </div>
+      <CouponList v-if="coupons && coupons.bottle" v-bind="{ coupons: coupons.bottle, from }"/>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import CouponList from './CouponList.vue';
+
+export default {
+  props: {
+    coupons: {
+      default: undefined,
+      type: Object,
+    },
+    from: {
+      default: undefined,
+      type: String,
+    },
+  },
+  components: {
+    CouponList
+  }
+};
 </script>
 
 <style scoped lang="scss">
@@ -82,5 +107,13 @@ export default {};
   font-size: 20px;
   line-height: 27px;
   margin-bottom: 10px;
+}
+
+.name {
+  min-height: 90px;
+
+  @include screen($xs) {
+    min-height: auto;
+  }
 }
 </style>
