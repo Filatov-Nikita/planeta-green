@@ -2,7 +2,7 @@
   <div class="counter counter--pb-18">
     <div class="counter__title">Высажено деревьев</div>
     <div class="counter__cells">
-      <div class="counter__cell" v-for="i in 4" :key="i">
+      <div class="counter__cell" v-for="i in 2" :key="i">
         <span class="counter__value">0</span>
       </div>
     </div>

@@ -119,7 +119,7 @@ export default {
 }
 
 .tree {
-  max-width: 312px;
+  max-width: 280px;
   margin-left: auto;
   margin-bottom: 25px;
 }
