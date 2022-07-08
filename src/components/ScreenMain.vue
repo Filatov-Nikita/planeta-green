@@ -144,7 +144,7 @@ export default {
 .counters-mobile {
   display: none;
   margin-top: -74px;
-  max-width: 420px;
+  max-width: 550px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;

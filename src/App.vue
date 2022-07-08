@@ -1,11 +1,11 @@
 <template>
-  <!-- <MainFinal /> -->
-  <Main />
+  <MainFinal />
+  <!-- <Main /> -->
 </template>
 
 <script>
-import Main from './components/Main.vue';
-// import MainFinal from './components/MainFinal.vue';
+// import Main from './components/Main.vue';
+import MainFinal from './components/MainFinal.vue';
 
 export default {
   name: 'App',
@@ -36,8 +36,8 @@ export default {
     }
   },
   components: {
-    Main,
-    // MainFinal
+    // Main,
+    MainFinal
   }
 }
 </script>

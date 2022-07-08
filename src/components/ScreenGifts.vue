@@ -2,8 +2,8 @@
   <section class="gifts" id="gift">
     <div class="wrapper fields">
       <h2 class="h2 a-text-center a-mb-50">{{ coupons !== undefined ? 'Призы и победители' : 'Призы'}}</h2>
-      <GiftsDates class="a-mb-60" v-bind="{ dates }" />
-      <GiftsList class="a-mb-50" v-bind="{ coupons, from }" />
+      <GiftsDates class="a-mb-60" v-bind="{ labelDates, coupons }" />
+      <GiftsList class="a-mb-50" v-bind="{ coupons: coupons && coupons[from], from }" />
     </div>
 
     <GiftsGet v-if="coupons !== undefined" />
@@ -49,14 +49,14 @@ export default {
   },
   data() {
     return {
-      dates: [
-        // '22 июля',
-        '5 августа',
-        '19 августа',
-        '2 сентября',
-        '16 сентября',
-        '30 сентября',
-      ],
+      labelDates: {
+        '22.07.2022': '22 июля',
+        '05.08.2022': '5 августа',
+        '19.08.2022': '19 августа',
+        '02.09.2022': '2 сентября',
+        '16.09.2022': '16 сентября',
+        '30.09.2022': '30 сентября',
+      },
     }
   },
   components: {
