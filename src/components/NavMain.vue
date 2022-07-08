@@ -7,7 +7,7 @@
     </div>
 
     <div class="nav-main__link">
-      <a href="#">Личный кабинет</a>
+      <a href="https://id.mall.tech/4">Личный кабинет</a>
     </div>
   </nav>
 </template>

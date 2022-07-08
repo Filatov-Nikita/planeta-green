@@ -7,7 +7,7 @@
         <div class="left">
           <h1 class="title a-mb-30">{{ title }}</h1>
           <p class="a-mb-30 a-text-semiBold">С 12 июля по 30 сентября</p>
-          <a class="button-green btn" href="#">Участвовать в акции</a>
+          <a class="button-green btn" href="https://id.mall.tech/4/promos/48">Участвовать в акции</a>
         </div>
         <div class="right">
           <CounterTree class="tree" />

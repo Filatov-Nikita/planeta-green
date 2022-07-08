@@ -11,7 +11,7 @@
       </div>
       <div class="name">
         <div class="label">Зонты</div>
-        <div class="value">50 шт</div>
+        <div class="value">50 шт.</div>
       </div>
       <CouponList v-if="coupons && coupons.umbrella" v-bind="{ coupons: coupons.umbrella, from }"/>
     </div>
@@ -26,7 +26,7 @@
       </div>
       <div class="name">
         <div class="label">Абонементы в фитнес-клуб на 1 месяц</div>
-        <div class="value">50 шт</div>
+        <div class="value">50 шт.</div>
       </div>
       <CouponList v-if="coupons && coupons.fitness" v-bind="{ coupons: coupons.fitness, from }"/>
     </div>
@@ -41,7 +41,7 @@
       </div>
       <div class="name">
         <div class="label">Бутылки</div>
-        <div class="value">50 шт</div>
+        <div class="value">50 шт.</div>
       </div>
       <CouponList v-if="coupons && coupons.bottle" v-bind="{ coupons: coupons.bottle, from }"/>
     </div>

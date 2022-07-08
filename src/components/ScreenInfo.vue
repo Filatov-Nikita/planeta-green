@@ -4,14 +4,12 @@
       <h2 class="h2 a-text-center a-mb-40">Информация</h2>
       <div class="items">
         <div class="btns">
-          <a class="btn btn--tl" href="#">Правила акции</a>
-          <a class="btn btn--tr" href="#">Вопросы-ответы</a>
-          <a @click.prevent="showInstruct = true" class="btn btn--tr" href="#"
-            >Видео-инструкция</a
-          >
-          <a class="btn btn--tl" href="#"
-            >Соглашение на обработку персональных данных</a
-          >
+          <a class="btn btn--tl" href="/documents/100240/view">Правила акции</a>
+          <a class="btn btn--tr" href="/documents/100241/view">Вопросы-ответы</a>
+          <a @click.prevent="showInstruct = true" class="btn btn--tr" href="#">Видеоинструкция</a>
+          <a class="btn btn--tl" href="https://id.mall.tech/pd">
+            Соглашение на обработку персональных данных
+          </a>
         </div>
       </div>
     </div>
