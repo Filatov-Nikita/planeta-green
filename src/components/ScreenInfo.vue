@@ -13,7 +13,9 @@
         </div>
       </div>
     </div>
-    <Dialog v-model="showInstruct"> video </Dialog>
+    <Dialog v-model="showInstruct">
+      <video class="video" src="/instruct.mp4" controls autoplay></video>
+    </Dialog>
   </section>
 </template>
 
@@ -33,6 +35,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.video {
+  width: 100%;
+  max-height: calc(100vh - 120px);
+}
+
 .info {
   padding-top: 120px;
   @include screen($xs) {

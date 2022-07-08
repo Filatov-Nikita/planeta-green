@@ -1,6 +1,9 @@
 <template>
   <div>
-    <button class="nav-btn" @click="toggle"></button>
+    <div class="row a-between">
+      <button class="nav-btn" @click="toggle"></button>
+      <img class="logo" width="96" height="72" src="@/assets/images/logo.png" alt="логотип «планеты»">
+    </div>
 
     <div class="menu" :class="{ 'menu--show': show }">
       <div class="wrapper">
@@ -34,6 +37,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.logo {
+  width: 70px;
+  height: auto;
+}
+
 .nav-btn,
 .nav-close {
   width: 32px;

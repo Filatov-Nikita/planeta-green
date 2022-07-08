@@ -44,14 +44,14 @@ export default {
   top: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
-  position: absolute;
+  position: relative;
   z-index: 100;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
   max-width: 1200px;
   padding: 15px;
@@ -62,8 +62,7 @@ export default {
   border-radius: 20px;
   padding: 25px 24px;
   overflow: scroll;
-  height: calc(100vh - 30px);
-  max-height: 600px;
+  max-height: calc(100vh - 30px);
 }
 
 .close-btn {

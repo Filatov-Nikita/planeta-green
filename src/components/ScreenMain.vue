@@ -50,7 +50,7 @@ export default {
   background-image: url(@/assets/images/main-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 55px;
+  padding-top: 30px;
   color: var(--fLight);
 
   @include screen($md) {

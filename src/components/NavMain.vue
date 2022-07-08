@@ -1,8 +1,11 @@
 <template>
-  <nav class="nav-main row a-between">
-    <div class="row a-grow a-items-center">
-      <div class="nav-main__link" v-for="link in links" :key="link.href">
-        <a :href="link.href">{{ link.label }}</a>
+  <nav class="nav-main row a-between a-items-center">
+    <div class="row a-items-center">
+      <img class="logo" width="96" height="72" src="@/assets/images/logo.png" alt="логотип «планеты»">
+      <div class="row">
+        <div class="nav-main__link" v-for="link in links" :key="link.href">
+          <a :href="link.href">{{ link.label }}</a>
+        </div>
       </div>
     </div>
 
@@ -56,5 +59,11 @@ export default {
       font-weight: 700;
     }
   }
+}
+
+.logo {
+  width: 96px;
+  height: auto;
+  margin-right: 50px;
 }
 </style>
