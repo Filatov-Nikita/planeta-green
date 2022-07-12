@@ -1,12 +1,13 @@
 <template>
   <div class="screen-main">
-    <div class="wrapper">
+    <div class="wrapper overlay">
       <NavMain class="desctop" />
       <NavMainSmall class="mobile" />
       <div class="content a-between">
         <div class="left">
           <h1 class="title a-mb-30">{{ title }}</h1>
-          <p class="a-mb-30 a-text-semiBold">С 12 июля по 30 сентября</p>
+          <p class="subtitle" v-html="subtitle"></p>
+          <p class="period">С 12 июля по 30 сентября</p>
           <a class="button-green btn" href="https://id.mall.tech/4/promos/48">Участвовать в акции</a>
         </div>
         <div class="right">
@@ -31,8 +32,8 @@ import CounterVisits from './CounterVisits.vue';
 export default {
   data() {
     return {
-      title:
-        'Стань участником акции «Зелёная Планета» и получи гарантированный приз!',
+      title: 'Зелёная Планета',
+      subtitle: 'Станьте участником акции и получите гарантированный приз. Каждый визит в&nbsp;Планету - ваш вклад в Зелёное Будущее!'
     };
   },
   components: {
@@ -66,6 +67,25 @@ export default {
    }
 }
 
+.overlay {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 310px;
+    left: 0;
+    width: 371px;
+    height: 311px;
+    background: rgba(0, 0, 0, 0.2);
+    filter: blur(300px);
+
+    @include screen($xs) {
+      display: none;
+    }
+  }
+}
+
 .content {
   display: flex;
 
@@ -76,21 +96,23 @@ export default {
 
 .left {
   padding-top: 107px;
-  flex-basis: 678px;
-
-  @include screen($lg) {
-    flex-basis: 558px;
-  }
+  width: 100%;
+  max-width: 520px;
 
   @include screen($xs) {
-    flex-basis: 316px;
+    max-width: 375px;
     padding-top: 22px;
   }
 }
 
 .right {
   padding-top: 63px;
-  flex-basis: 448px;
+  width: 100%;
+  max-width: 437px;
+
+  @include screen($lg) {
+    max-width: 407px;
+  }
 
   @include screen($md) {
     display: none;
@@ -98,13 +120,37 @@ export default {
 }
 
 .title {
-  font-size: 42px;
-  line-height: 57px;
+  font-size: 52px;
+  line-height: 71px;
   font-weight: 700;
 
   @include screen($xs) {
-    font-size: 24px;
-    line-height: 33px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 35px;
+  margin-bottom: 40px;
+
+  @include screen($xs) {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+
+.period {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 30px;
+
+  @include screen($xs) {
+    font-size: 16px;
+    line-height: 1.4;
   }
 }
 
