@@ -2,7 +2,9 @@
   <div>
     <div class="row a-between">
       <button class="nav-btn" @click="toggle"></button>
-      <img class="logo" width="96" height="72" src="@/assets/images/logo.png" alt="логотип «планеты»">
+      <a class="logo" href="https://ufa.planeta-mall.ru">
+        <img width="96" height="72" src="@/assets/images/logo.png" alt="логотип «планеты»">
+      </a>
     </div>
 
     <div class="menu" :class="{ 'menu--show': show }">
@@ -39,7 +41,9 @@ export default {
 <style scoped lang="scss">
 .logo {
   width: 70px;
-  height: auto;
+  img {
+    height: auto;
+  }
 }
 
 .nav-btn,

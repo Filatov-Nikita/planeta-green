@@ -1,7 +1,9 @@
 <template>
   <nav class="nav-main row a-between a-items-center">
     <div class="row a-items-center">
-      <img class="logo" width="96" height="72" src="@/assets/images/logo.png" alt="логотип «планеты»">
+      <a class="logo" href="https://ufa.planeta-mall.ru">
+        <img width="96" height="72" src="@/assets/images/logo.png" alt="логотип «планеты»">
+      </a>
       <div class="row">
         <div class="nav-main__link" v-for="link in links" :key="link.href">
           <a :href="link.href">{{ link.label }}</a>
@@ -63,7 +65,9 @@ export default {
 
 .logo {
   width: 96px;
-  height: auto;
   margin-right: 50px;
+  img {
+    height: auto;
+  }
 }
 </style>

@@ -20,7 +20,7 @@
         <img
           width="228"
           height="228"
-          src="@/assets/images/sport.png"
+          src="@/assets/images/sport.svg"
           alt="приз - абонемент в фитнес-клуб"
         />
       </div>

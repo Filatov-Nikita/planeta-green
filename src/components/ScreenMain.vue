@@ -1,6 +1,6 @@
 <template>
   <div class="screen-main">
-    <div class="wrapper overlay">
+    <div class="wrapper">
       <NavMain class="desctop" />
       <NavMainSmall class="mobile" />
       <div class="content a-between">
@@ -51,6 +51,8 @@ export default {
   background-image: url(@/assets/images/main-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-y: bottom;
+  background-position-x: center;
   padding-top: 30px;
   color: var(--fLight);
 
@@ -60,29 +62,10 @@ export default {
     min-height: auto;
   }
 
-   @media screen and (max-width: 480px) {
+  @media screen and (max-width: 480px) {
     background-image: url(@/assets/images/main-bg-sm.jpg);
     background-size: cover;
     background-position: center;
-   }
-}
-
-.overlay {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 310px;
-    left: 0;
-    width: 371px;
-    height: 311px;
-    background: rgba(0, 0, 0, 0.2);
-    filter: blur(300px);
-
-    @include screen($xs) {
-      display: none;
-    }
   }
 }
 
@@ -123,15 +106,16 @@ export default {
   font-size: 52px;
   line-height: 71px;
   font-weight: 700;
+  text-transform: uppercase;
 
   @include screen($xs) {
-    font-size: 36px;
+    font-size: 30px;
     line-height: 40px;
   }
 }
 
 .subtitle {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 24px;
   line-height: 35px;
   margin-bottom: 40px;
@@ -143,7 +127,7 @@ export default {
 }
 
 .period {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
   line-height: 27px;
   margin-bottom: 30px;
