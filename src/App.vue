@@ -1,11 +1,11 @@
 <template>
-  <!-- <MainFinal /> -->
-  <Main />
+  <MainFinal />
+  <!-- <Main /> -->
 </template>
 
 <script>
-import Main from './components/Main.vue';
-// import MainFinal from './components/MainFinal.vue';
+// import Main from './components/Main.vue';
+import MainFinal from './components/MainFinal.vue';
 
 export default {
   name: 'App',
@@ -31,13 +31,13 @@ export default {
         if(response.status !== 200) throw 'ответ не 200';
         this.counter.value = await response.json();
       } catch(e) {
-        alert('не удалось получить данные счетчика');
+        console.error('не удалось получить данные счетчика');
       }
     }
   },
   components: {
-    Main,
-    // MainFinal
+    // Main,
+    MainFinal
   }
 }
 </script>
