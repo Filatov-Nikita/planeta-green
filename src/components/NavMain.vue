@@ -10,10 +10,6 @@
         </div>
       </div>
     </div>
-
-    <div class="nav-main__link">
-      <a href="https://id.mall.tech/4">Личный кабинет</a>
-    </div>
   </nav>
 </template>
 
@@ -27,20 +23,8 @@ export default {
           label: 'О проекте',
         },
         {
-          href: '#gift',
-          label: 'Призы',
-        },
-        {
-          href: '#terms',
-          label: 'Условия участия',
-        },
-        {
-          href: '#info',
-          label: 'Информация',
-        },
-        {
-          href: '#partners',
-          label: 'Партнеры',
+          href: '#activities',
+          label: 'Активности',
         },
       ],
     };

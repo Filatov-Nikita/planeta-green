@@ -7,8 +7,6 @@
         <div class="left">
           <h1 class="title a-mb-30">{{ title }}</h1>
           <p class="subtitle" v-html="subtitle"></p>
-          <p class="period">С 12 июля по 30 сентября</p>
-          <a class="button-green btn" href="https://id.mall.tech/4/promos/48">Участвовать в акции</a>
         </div>
         <div class="right">
           <CounterTree class="tree" />
@@ -33,7 +31,7 @@ export default {
   data() {
     return {
       title: 'Зелёная Планета',
-      subtitle: 'Станьте участником акции и получите гарантированный приз. Каждый визит в&nbsp;Планету - ваш вклад в Зелёное Будущее!'
+      subtitle: 'Каждый визит в Планету - ваш вклад в&nbsp;Зелёное Будущее!'
     };
   },
   components: {

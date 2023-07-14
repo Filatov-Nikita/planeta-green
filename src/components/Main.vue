@@ -2,10 +2,7 @@
   <main>
     <ScreenMain />
     <ScreenAbout />
-    <ScreenGifts />
-    <ScreenTerms />
-    <ScreenInfo />
-    <ScreenPartners />
+    <ScreenActivities />
     <ScreenFooter />
   </main>
 </template>
@@ -13,20 +10,14 @@
 <script>
 import ScreenMain from './ScreenMain.vue';
 import ScreenAbout from './ScreenAbout.vue';
-import ScreenGifts from './ScreenGifts.vue';
-import ScreenTerms from './ScreenTerms.vue';
-import ScreenInfo from './ScreenInfo.vue';
-import ScreenPartners from './ScreenPartners.vue';
+import ScreenActivities from './ScreenActivities.vue';
 import ScreenFooter from './ScreenFooter.vue';
 
 export default {
   components: {
     ScreenMain,
+    ScreenActivities,
     ScreenAbout,
-    ScreenGifts,
-    ScreenTerms,
-    ScreenInfo,
-    ScreenPartners,
     ScreenFooter
   }
 };

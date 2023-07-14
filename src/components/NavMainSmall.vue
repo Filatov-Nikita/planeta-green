@@ -12,11 +12,7 @@
         <button class="nav-close a-mb-30" @click="toggle"></button>
         <nav>
           <a @click="toggle" href="#about" class="link">О проекте</a>
-          <a @click="toggle" href="#gift" class="link">Призы</a>
-          <a @click="toggle" href="#terms" class="link">Условия участия</a>
-          <a @click="toggle" href="#info" class="link">Информация</a>
-          <a @click="toggle" href="#partners" class="link">Партнеры</a>
-          <a href="https://id.mall.tech/4" class="link">Личный кабинет</a>
+          <a @click="toggle" href="#activities" class="link">Активности</a>
         </nav>
       </div>
     </div>
